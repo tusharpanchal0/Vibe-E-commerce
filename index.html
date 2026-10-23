@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="assets/css/style.css" rel="stylesheet">
+<script src="assets/js/main.js" defer></script>
+<title>Vibe — Shop Your Style</title>
+
+</head>
+<body>
+
+<div class="announcement">
+    ✨ Welcome to Vibe — Get <strong>20% OFF</strong> your first order! Use code VIBE20
+</div>
+
+<header>
+    <div class="container nav">
+        <a class="logo" href="#">Vibe<span>.</span></a>
+
+        <nav id="mainNav">
+            <a class="active" href="#">Home</a>
+            <a href="pages/shop.html">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <form class="search" id="searchForm">
+                <span>⌕</span>
+                <input type="search" id="searchInput" placeholder="Search products...">
+            </form>
+
+            <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Dark mode">☾</button>
+
+            <button class="icon-btn" id="wishlistButton" aria-label="Show wishlist" title="Wishlist">
+                ♡<span class="count" id="wishCount">0</span>
+            </button>
+
+            <button class="icon-btn" id="cartButton" aria-label="Open cart" title="Shopping cart">
+                🛒<span class="count" id="cartCount">0</span>
+            </button>
+
+            <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="hero">
+        <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">‹</button>
+
+        <div class="hero-copy">
+            <span class="pill" id="heroPill">LIMITED TIME OFFER</span>
+            <h1 id="heroTitle">Upgrade Your<br>Style, <span>Today.</span></h1>
+            <p id="heroDescription">Discover premium quality products, curated just for you. Shop the latest trends with ease and style.</p>
+            <div class="hero-actions">
+                <a href="#shop" class="btn">Shop Now →</a>
+                <a href="#categories" class="text-link">Explore Collection ↗</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <img id="heroImage" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1100&q=85" alt="Premium headphones">
+            <div class="hero-label">
+                <strong id="heroProduct">Premium Headphones</strong>
+                <span id="heroTagline">Sound that moves you</span>
+            </div>
+        </div>
+
+        <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">›</button>
+    </section>
+
+    <div class="container">
+        <section class="benefits">
+            <div class="benefit"><div class="benefit-icon">♧</div><div><strong>Free Shipping</strong><p>On orders over ₹999</p></div></div>
+            <div class="benefit"><div class="benefit-icon">♢</div><div><strong>Secure Payments</strong><p>Safe checkout experience</p></div></div>
+            <div class="benefit"><div class="benefit-icon">↺</div><div><strong>Easy Returns</strong><p>Within 7 days</p></div></div>
+            <div class="benefit"><div class="benefit-icon">♧</div><div><strong>Friendly Support</strong><p>We're here to help</p></div></div>
+        </section>
+
+        <section class="content-section" id="catgoeries">
+            <div class="section-heading">
+                <div><h2>Shop by Category</h2><p>Find something made for you.</p></div>
+                <button class="view-all" id="allCategories">View All →</button>
+            </div>
+            <div class="categories" id="categoryList"></div>
+        </section>
+
+        <section class="content-section" id="shop">
+            <div class="section-heading">
+                <div><h2 id="productHeading">Best Sellers</h2><p>Most loved. Most wanted.</p></div>
+                <button class="view-all" id="resetFilters">Reset Filters ↺</button>
+            </div>
+
+            <div class="toolbar" id="filterBar">
+                <button class="filter active" data-filter="All">All Products</button>
+                <button class="filter" data-filter="Electronics">Electronics</button>
+                <button class="filter" data-filter="Fashion">Fashion</button>
+                <button class="filter" data-filter="Home & Living">Home & Living</button>
+                <button class="filter" data-filter="Accessories">Accessories</button>
+                <select id="sortSelect" aria-label="Sort products">
+                    <option value="featured">Sort: Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                </select>
+            </div>
+
+            <div class="products" id="productList"></div>
+        </section>
+
+        <section class="promo">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="Featured electronics">
+            <div class="promo-copy">
+                <span class="pill">SPECIAL DEAL</span>
+                <h2>Get 20% Off on<br>Selected Products</h2>
+                <p>Limited time only. Don't miss out!</p>
+            </div>
+            <a href="#shop" class="btn">Shop Deals →</a>
+        </section>
+
+        <section class="newsletter">
+            <h2>Join the Vibe Club ✨</h2>
+            <p>Get exclusive offers, new arrivals and special deals straight to your inbox.</p>
+            <form id="newsletterForm">  
+                <input type="email" id="emailInput" placeholder="Your email address" required>
+                <button type="submit">Subscribe →</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand" id="about">
+                <a class="logo" href="#">Vibe<span>.</span></a>
+                <p>Better Products. A Brighter You.</p>
+                <div class="socials">
+                    <a href="#contact" aria-label="Facebook">f</a>
+                    <a href="#contact" aria-label="Instagram">◎</a>
+                    <a href="#contact" aria-label="YouTube">▶</a>
+                    <a href="#contact" aria-label="X">𝕏</a>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#">Home</a><a href="#shop">Shop</a>
+                <a href="#categories">Categories</a><a href="#about">About</a><a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h3>Customer Service</h3>
+                <a href="#contact">FAQs</a><a href="#contact">Shipping Policy</a>
+                <a href="#contact">Return Policy</a><a href="#contact">Track Order</a><a href="#contact">Support</a>
+            </div>
+            <div>
+                <h3>Shopping Made Simple</h3>
+                <p>Discover your next favorite thing with Vibe. Quality products, thoughtful prices and a better shopping experience.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>© <span id="year"></span> Vibe. All rights reserved.</span>
+            <span>Secure shopping · Made with care ♥</span>
+        </div>
+    </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-modal="true" role="dialog">
+    <div class="drawer-head">
+        <h2>Your Shopping Bag 🛍️</h2>
+        <button class="close-btn" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom">
+        <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+        <button class="btn" id="checkoutButton">Proceed to Checkout →</button>
+        <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:12px">Demo checkout — no real payment will be taken.</p>
+    </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+</body>
+</html>
